@@ -22,7 +22,7 @@ const request = (numbers, date) => '<REQUEST> \
 
 export const GetTrainNumbers = async (numbers) => {
 
-    let result = await axios.post('http://api.trafikinfo.trafikverket.se/v1.3/data.json', request(numbers, moment()), {
+    let result = await axios.post('https://api.trafikinfo.trafikverket.se/v1.3/data.json', request(numbers, moment()), {
         headers: {
             'Content-Type': 'text/xml'
         }
