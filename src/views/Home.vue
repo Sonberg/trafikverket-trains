@@ -101,6 +101,8 @@ export default {
                     trains: vals.length ? vals.filter(uniq).join(',') : null
                 }
             });
+            
+            this.update();
         },
         async update() {
             this.trains = await GetTrainNumbers(this.selectedTrainNumbers);

@@ -10,7 +10,7 @@
         <h4 v-html="informationText" />
     </div>
     <div class="flex flex-wrap justify-end">
-        <div class="text-sm bg-indigo-darker text-white rounded py-1 px-3 hidden md:block" v-if="item.TrackAtLocation">
+        <div class="text-sm bg-indigo-darker text-white py-1 px-3 hidden md:block" v-if="item.TrackAtLocation">
             Plattform {{item.TrackAtLocation}}
         </div>
     </div>

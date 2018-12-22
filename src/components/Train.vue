@@ -5,11 +5,11 @@
 
     <div class="text-lg text-indigo-darker bg-white flex flex-col" v-if="open">
         <div class="w-full flex flex-row flex-wrap" v-if="stations[0]">
-            <div class="p-1 px-3 w-full md:w-1/2">
+            <div class="py-6 px-3 w-full md:w-1/2">
                 <train-timeline :stations="stations" :selected="selected" :select="didSelect" />
             </div>
 
-            <div class="p-1 px-3 w-full md:w-1/2" v-if="selected">
+            <div class="p-6 pl-3 w-full md:w-1/2" v-if="selected">
                 <train-stop :primaryStop="selected" :stops="stopsAt(selected.LocationSignature)"/>
             </div>
         </div>

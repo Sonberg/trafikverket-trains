@@ -1,5 +1,5 @@
 <template>
-    <div :class="[tagClasses, textClasses,  'py-1 px-3 border-2 mr-2']"><slot/></div>
+    <div :class="[tagClasses, textClasses,  'py-1 px-3 mr-3', { 'border-2' : border }]"><slot/></div>
 </template>
 
 <script>
@@ -12,6 +12,10 @@ export default {
         textColor: {
             type: String,
             default: 'black'
+        },
+        border: {
+            type: Boolean,
+            default: true
         }
     },
     computed: {

@@ -1,6 +1,6 @@
 <template>
-<div class="text-lg text-white bg-indigo-darker p-4  flex flex-row justify-between" @click="toggle">
-    <div class="flex flex-row">
+<div class="text-lg text-white bg-indigo-darker p-4  flex flex-row justify-between">
+    <div class="flex flex-row" @click="toggle">
         <div class="bg-indigo px-3 py-1 text-sm font-bold flex items-center align-center hidden md:block">
             {{information.AdvertisedTrainIdent}}
         </div>
@@ -9,13 +9,13 @@
         </div>
     </div>
     <div class="flex flex-row">
-        <v-tag color="indigo-darkest" text-color="white" class="hidden md:block" v-if="haReachedDestination">
+        <v-tag color="none" text-color="white" class="hidden md:block" v-if="haReachedDestination" :border="false">
             Tåget har nått sin destination
         </v-tag>
-        <v-tag color="indigo-darkest" text-color="white" class="hidden md:block" v-else-if="nextStop">
+        <v-tag color="none" text-color="white" class="hidden md:block" v-else-if="nextStop" :border="false">
             {{nextStopDisplayName}}
         </v-tag>
-         <div class="border-white border-2 font-bold text-white hover:border-red hover:bg-red hover:text-white px-3 py-1 text-sm flex items-center align-center" @click="remove(number)">
+         <div class="border-white border-2 font-bold text-white hover:border-red hover:bg-red hover:text-white px-3 py-1 text-sm flex items-center align-center hidden sm:block" @click="remove(information.AdvertisedTrainIdent)">
             Ta bort
         </div>
     </div>

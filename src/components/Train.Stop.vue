@@ -1,18 +1,18 @@
 <template>
-<div class="p-6 m-3 flex flex-col">
+<div class="p-3 flex flex-col border">
     <div class="flex flex-row justify-between">
         <div>
             <p class="text-sm mb-2 uppercase" v-html="primaryStop.InformationOwner" />
             <h2 v-html="displayName" />
         </div>
-        <div class="flex flex-row flex-wrap my-3">
-            <v-tag color="red-light" text-color="white" v-if="isCanceled">Inställd</v-tag>
-            <v-tag color="yellow-light" v-if="isLate">Ny tid</v-tag>
-        </div>
     </div>
-    <div class="flex flex-row mt-3">
-        <div v-for="stop in stops" :key="stop.ActivityId" class="mr-3 border border-grey rounded p-3">
-            <h3 v-html="stop.ActivityType == 'Ankomst' ? 'Ankommer' : 'Avgår'" />
+    <div class="flex flex-wrap justify-start mt-3" v-if="isCanceled || isLate">
+        <v-tag color="red-light" text-color="white" :border="false" v-if="isCanceled">Inställd</v-tag>
+        <v-tag color="indigo-darkest" text-color="white" :border="false" v-if="isLate">Ny tid</v-tag>
+    </div>
+    <div class="flex flex-row flex-wrap mt-3">
+        <div v-for="stop in stops" :key="stop.ActivityId" class="mr-6">
+            <h5 v-html="stop.ActivityType == 'Ankomst' ? 'Ankommer' : 'Avgår'" class="uppercase text-sm" />
             <p v-html="displayTime(stop.EstimatedTimeAtLocation)" v-if="stop.EstimatedTimeAtLocation" />
             <p v-html="displayTime(stop.AdvertisedTimeAtLocation)" :class="{ 'line-through text-sm' : stop.EstimatedTimeAtLocation }" />
         </div>
