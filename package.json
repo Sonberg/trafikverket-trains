@@ -1,5 +1,5 @@
 {
-  "name": "tag-watcher",
+  "name": "trafikverket-trains",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,6 +7,10 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "lodash": "^4.17.11",
+    "moment": "^2.23.0",
+    "tailwindcss": "^0.7.2",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1"
   },
@@ -15,12 +19,8 @@
     "@vue/cli-service": "^3.0.1",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
+    "tailwind": "^3.0.0",
     "vue-template-compiler": "^2.5.17"
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
   },
   "browserslist": [
     "> 1%",

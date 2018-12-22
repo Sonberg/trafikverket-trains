@@ -1,4 +1,4 @@
-# tag-watcher
+# trafikverket-trains
 
 ## Project setup
 ```
