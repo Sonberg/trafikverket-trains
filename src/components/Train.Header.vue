@@ -1,6 +1,6 @@
 <template>
 <div class="text-lg text-white bg-indigo-darker p-4  flex flex-row justify-between">
-    <div class="flex flex-row" @click="toggle">
+    <div class="flex flex-row flex-auto" @click="toggle">
         <div class="bg-indigo px-3 py-1 text-sm font-bold flex items-center align-center hidden md:block">
             {{information.AdvertisedTrainIdent}}
         </div>
