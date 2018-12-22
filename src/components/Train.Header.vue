@@ -1,6 +1,6 @@
 <template>
-<div class="text-lg text-white bg-indigo-darker p-4  flex flex-row justify-between">
-    <div class="flex flex-row flex-auto" @click="toggle">
+<div class="text-lg text-white bg-indigo-darker p-4  flex flex-row justify-between  overflow-hidden">
+    <div class="flex flex-row flex-auto flex-no-shrink" @click="toggle">
         <div class="bg-indigo px-3 py-1 text-sm font-bold flex items-center align-center hidden md:block">
             {{information.AdvertisedTrainIdent}}
         </div>
@@ -15,7 +15,7 @@
         <v-tag color="none" text-color="white" class="hidden md:block" v-else-if="nextStop" :border="false">
             {{nextStopDisplayName}}
         </v-tag>
-         <div class="border-white border-2 font-bold text-white hover:border-red hover:bg-red hover:text-white px-3 py-1 text-sm flex items-center align-center hidden sm:block" @click="remove(information.AdvertisedTrainIdent)">
+         <div class="border-white border-2 font-bold text-white hover:border-red hover:bg-red hover:text-white px-3 py-1 text-sm  hidden sm:block" @click="remove(information.AdvertisedTrainIdent)">
             Ta bort
         </div>
     </div>

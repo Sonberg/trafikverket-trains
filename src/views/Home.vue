@@ -15,7 +15,7 @@
         </div>
 
         <div class="border-t-2 border-indigo py-6">
-            <div class="w-1/3 mb-6">
+            <div class="w-full mb-6">
                 <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-state">
         Uppdatera varje
       </label>

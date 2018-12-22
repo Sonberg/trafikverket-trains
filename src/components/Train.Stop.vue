@@ -1,6 +1,6 @@
 <template>
 <div class="p-3 flex flex-col border">
-    <div class="flex flex-row justify-between">
+    <div class="flex flex-col-reverse justify-between">
         <div>
             <p class="text-sm mb-2 uppercase" v-html="primaryStop.InformationOwner" />
             <h2 v-html="displayName" />
